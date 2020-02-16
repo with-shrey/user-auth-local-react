@@ -14,6 +14,7 @@ const Storage = {
       return false;
     }
     this.saveJSON(user.email, user);
+    return true;
   },
   getAuthUser() {
     const userEmail = localStorage.getItem(AUTH_USER_EMAIL);

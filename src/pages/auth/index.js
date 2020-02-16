@@ -3,7 +3,7 @@ import {Redirect, Route, Switch} from "react-router-dom";
 import LoadingIndicator from "../../components/loading-indicator";
 
 const SignupPage = React.lazy(() => import(/* webpackChunkName: "Signup" */ './signup'));
-const LoginPage = React.lazy(() => import(/* webpackChunkName: "Signup" */ './login'));
+const LoginPage = React.lazy(() => import(/* webpackChunkName: "Login" */ './login'));
 
 export default function AuthRoutes({match}) {
   return (

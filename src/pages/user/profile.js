@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Table from "react-bootstrap/Table";
 import Storage from "../../utils/storage";
-import {Button} from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 
 export default function ProfilePage(props) {

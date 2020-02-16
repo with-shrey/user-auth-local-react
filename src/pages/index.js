@@ -5,6 +5,7 @@ import UserRoutes from "./user";
 import AuthenticatedRoute from "../components/authenticated-route";
 import UnAuthenticatedOnlyRoute from "../components/unauthenticated-only-route";
 
+
 export default function Pages() {
   return (
     <Switch>

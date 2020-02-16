@@ -7,7 +7,7 @@ import UserForm from "../../containers/user-form";
 import Alert from "react-bootstrap/Alert";
 import {Link} from "react-router-dom";
 
-export default function SignupPage() {
+export default function SignupPage(props) {
   const [error, setError] = useState('');
   const createUser = ({firstName, lastName, email, password}) => {
     setError('');
@@ -19,6 +19,8 @@ export default function SignupPage() {
     });
     if (!success) {
       setError('User Already Exists')
+    } else {
+      props.history.push('/auth/login')
     }
   };
 
