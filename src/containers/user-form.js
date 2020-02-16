@@ -13,7 +13,7 @@ function UserForm(props) {
   const passwordRef = useRef(null);
   const confirmPasswordRef = useRef(null);
 
-  const valid = () => {
+  const isValid = () => {
     const error = {};
     const emailRegExp = /\S+@\S+\.\S+/;
     if (!email) {
@@ -45,7 +45,7 @@ function UserForm(props) {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    if (valid()) {
+    if (isValid()) {
       const password = passwordRef.current.value;
       props.onSubmit({firstName, lastName, email, password});
     }

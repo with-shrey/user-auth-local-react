@@ -16,7 +16,7 @@ export default function LoginPage(props) {
   //Uncontrolled Input For Password Fields
   const passwordRef = useRef(null);
 
-  const valid = () => {
+  const isValid = () => {
     const error = {};
     const emailRegExp = /\S+@\S+\.\S+/;
     if (!email) {
@@ -37,7 +37,7 @@ export default function LoginPage(props) {
   const attemptUserLogin = (event) => {
     event.preventDefault();
     setSubmitError('');
-    if (valid()) {
+    if (isValid()) {
       const password = passwordRef.current.value;
       const success = Storage.loginUser(email, password);
       if (!success) {
